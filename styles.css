@@ -10,12 +10,13 @@
   /* Colores */
   --bitcoin-orange: #F7931A;
   --soft-orange: #FFE9D5;
-  --secondaty-blue: #1A9AF7;
+  --secondary-blue: #1A9AF7;
   --soft-blue: #E7F5FF;
   --warm-black: #201E1C;
   --black: #282623;
   --grey: #BABABA;
   --secundary-gray: #757575;
+  --soft-gray: #808080;
   --off-white: #FAF8F7;
   --white: #FFFFFF;
 }
@@ -289,5 +290,48 @@ main {
   font-size: 1.8rem;
   font-weight: bold;
   line-height: 2.3rem;
-  color: var(--secondaty-blue);
+  color: var(--secondary-blue);
+}
+
+/* Benefits */
+.main-product-detail {
+  position: relative; /* Base (ancla) para el batata-logo*/
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+  padding: 20px 10px; /* Los 10px de Izq/Der nos permitirá agregar un 100% en las cards que agregaremos dentro de la seccion (articles) */
+  background-color: var(--warm-black);
+}
+
+.product-detail--batata-logo {
+  position: absolute; /* Buscara al primer padre que tenga un position: relative para tomarlo de base*/
+  width: 40px;
+  height: 25px;
+  top: -10px;
+  left: calc(50% - 20px);
+  background-image: url('./assets/icons/batata.svg');
+}
+
+.product-detail--title {
+  width: 90%;
+  min-width: 288px;
+  height: auto;
+  margin: 50px auto 0;
+  text-align: center;
+}
+
+.product-detail--title h2 {
+  margin-bottom: 20px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--white);
+}
+
+.product-detail--title p {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: var(--soft-gray);
 }
