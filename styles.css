@@ -441,7 +441,6 @@ main {
 /* Plan - slider*/
 .plans-container--slider {
   display: flex;
-  gap: 10px;
   height: 316px;
   overflow-x: scroll;
   overscroll-behavior-x: contain;
@@ -462,7 +461,7 @@ main {
   min-width: 190px;
   max-width: 300px;
   height: 250px;
-  margin: 50px auto 0;
+  margin: 50px 10px 0;
   padding: 0 15px;
   background-color: var(--white);
   border-radius: 15px;
@@ -572,8 +571,4 @@ footer .left ul li a {
   text-decoration: none;
   color: var(--white);
   cursor: pointer;
-}
-
-footer .right {
-
 }
