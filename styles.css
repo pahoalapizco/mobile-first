@@ -163,6 +163,7 @@ main {
 }
 
 /* Tables */
+
 .main-currency-table,
 .main-comision-table {
   width: 70%;
@@ -340,7 +341,7 @@ main {
   width: 90%;
   min-width: 288;
   max-width: 400px;
-  min-height: 150px;
+  min-height: 150px; /* Evitar overflow */
   margin: 15px auto;
   padding: 15px;
   background-color: var(--black);
@@ -435,4 +436,109 @@ main {
   font-weight: 500;
   line-height: 1.4rem;
   color: var(--secundary-gray);
+}
+
+/* Plan - slider*/
+.plans-container--slider {
+  display: flex;
+  gap: 20px;
+  height: 316px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+.plans-container--slider::-webkit-scrollbar {
+  background-color: var(--soft-orange);
+  height: 3px;
+}
+.plans-container--slider::-webkit-scrollbar-thumb {
+  background-color: var(--bitcoin-orange);
+}
+
+.plans-container--card {
+  position: relative;
+  scroll-snap-align: center; /* Al hacer el scroll nos lleva al centro del elemento en el que nos posicionamos*/
+  width: 70%;
+  min-width: 230px;
+  max-width: 300px;
+  height: 250px;
+  margin: 50px auto 0;
+  padding: 0 15px;
+  background-color: var(--white);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+
+.recommended {
+  position: absolute;
+  width: 120px;
+  height: 31px;
+  padding: 6px;
+  top: -15px;
+  left: calc(50% - 60px);
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 15px;
+  text-align: center;
+  color: var(--white);
+  border-radius: 5px;
+  background-color: var(--bitcoin-orange);
+}
+
+.plan-card--title {
+  padding-top: 40px;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8px;
+  color: black;
+}
+
+.plan-card--price {
+  position: relative;
+  padding: 5px 0;
+  font-family: "Inter", sans-serif;
+  font-size: 5.2rem;
+  font-weight: bold;
+  line-height: 6.3rem;
+  color: black;
+}
+.plan-info--container .plan-card--price::before {
+  position: absolute;
+  top: 20%;
+  left: calc(50% - 50px);
+  content: "$";
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1rem;
+}
+
+.plan-card--saving {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  text-align: center;
+  color: var(--secundary-gray);
+}
+
+.plan-card--call {
+  margin-top: 20px;
+  width: 150px;
+  height: 48px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+  border: 2px solid var(--bitcoin-orange);
+  border-radius: 5px;
+  background-color: var(--off-white);
+}
+
+.plan-card--call span { 
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  background-image: url("./assets/icons/orange-right-arrow.svg");
+  vertical-align: text-bottom;
 }
