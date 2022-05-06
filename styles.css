@@ -163,14 +163,29 @@ main {
 }
 
 /* Tables */
+.main-tables-container {
+  display: flex;
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+
+.main-tables-container::-webkit-scrollbar {
+  display: none;
+  background-color: var(--soft-orange);
+  height: 0px;
+}
+
 
 .main-currency-table,
 .main-comision-table {
+  scroll-snap-align: center; 
   width: 70%;
   min-width: 235px;
   max-width: 500px;
   height: 360px;
-  margin: 0 auto;
+  margin: 0 50px;
   font-family: "Inter", sans-serif;
 }
 
